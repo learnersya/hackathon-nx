@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sasidharan\\Hackathon-jan01\\hackathon-monorepo\\apps\\dotnet-app\\dotnet-app.csproj",
+      "projectUniqueName": "C:\\Users\\sasidharan\\hackathonnx\\apps\\dotnet-app\\dotnet-app.csproj",
       "projectName": "dotnet-app",
-      "projectPath": "C:\\Users\\sasidharan\\Hackathon-jan01\\hackathon-monorepo\\apps\\dotnet-app\\dotnet-app.csproj",
+      "projectPath": "C:\\Users\\sasidharan\\hackathonnx\\apps\\dotnet-app\\dotnet-app.csproj",
       "packagesPath": "C:\\Users\\sasidharan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sasidharan\\Hackathon-jan01\\hackathon-monorepo\\apps\\dotnet-app\\obj\\",
+      "outputPath": "C:\\Users\\sasidharan\\hackathonnx\\apps\\dotnet-app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sasidharan\\AppData\\Roaming\\NuGet\\NuGet.Config"
