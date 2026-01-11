@@ -1,0 +1,41 @@
+{
+  "name": "dotnet-app",
+  "projectType": "application",
+  "targets": {
+    "restore": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/dotnet-app",
+        "command": "dotnet restore"
+      }
+    },
+    "build": {
+      "dependsOn": ["restore"],
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/dotnet-app",
+        "command": "dotnet build --configuration Release"
+      }
+    },
+    "run": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/dotnet-app",
+        "command": "dotnet run"
+      }
+    },
+    "docker-build": {
+      "dependsOn": ["build"],
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "docker build -t dotnet-app:latest -f apps/dotnet-app/Dockerfile ."
+      }
+    },
+    "docker-run": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "docker run -d -p 5000:8080 dotnet-app:latest"
+      }
+    }
+  }
+}

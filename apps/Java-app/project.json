@@ -1,0 +1,33 @@
+{
+  "name": "java-app",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/java-app",
+        "command": "mvn clean package -DskipTests"
+      }
+    },
+    "run": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/java-app",
+        "command": "java -jar target/java-app.jar"
+      }
+    },
+    "docker-build": {
+      "dependsOn": ["build"],
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "docker build -t java-app:latest -f apps/java-app/Dockerfile ."
+      }
+    },
+    "docker-run": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "docker run -d -p 8081:8080 java-app:latest"
+      }
+    }
+  }
+}

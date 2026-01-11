@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "ynd76rhUj6c=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sasidharan\\Hackathon-jan01\\hackathon-monorepo\\apps\\dotnet-app\\dotnet-app.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sasidharan\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.22\\microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "C:\\Users\\sasidharan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.22\\microsoft.windowsdesktop.app.ref.8.0.22.nupkg.sha512",
+    "C:\\Users\\sasidharan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.22\\microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
+    "C:\\Users\\sasidharan\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.22\\microsoft.netcore.app.host.win-x64.8.0.22.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,40 @@
+name: Nx Monorepo CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  nx-ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      # Node for Nx
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      # .NET for dotnet apps
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      # Docker
+      - name: Setup Docker
+        uses: docker/setup-buildx-action@v3
+
+      - name: Install Nx dependencies
+        run: npm ci
+
+      # Nx controls EVERYTHING
+      - name: Nx build Docker images
+        run: |
+          npx nx run python-app:docker-build
+          npx nx run dotnet-app:docker-build
