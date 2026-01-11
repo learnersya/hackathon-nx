@@ -8,5 +8,9 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="project.json" />
+    <None Include="project.json" />
+</ItemGroup>
 
 </Project>

@@ -14,7 +14,13 @@
       "executor": "nx:run-commands",
       "options": {
         "cwd": "apps/dotnet-app",
-        "command": "dotnet build --configuration Release"
+        "command": "dotnet build dotnet-app.csproj"
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "dotnet run --project apps/dotnet-app"
       }
     },
     "run": {
